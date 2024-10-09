@@ -1,0 +1,15 @@
+python -m venv imageclass 
+
+.\imageclass\scripts\activate 
+
+pip install ipykernel 
+
+python -m ipykernel install --name=imageclass
+
+
+#listing the envs:
+jupyter kernelspec list 
+
+#deleting envs:
+jupyter kernelspec uninstall <name>
+
