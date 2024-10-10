@@ -5,9 +5,9 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 # Dossier contenant les images à pré-traiter
-input_dir = "/home/khalil/image_search_engine/data/images/"
+input_dir = r".\data\images"
 # Dossier où sauvegarder les images pré-traitées
-output_dir = "/home/khalil/image_search_engine/data/preprocessed_images/"
+output_dir = r".\data\preprocessed_images"
 os.makedirs(output_dir, exist_ok=True)
 
 # Fonction pour charger et pré-traiter une image
@@ -20,11 +20,12 @@ def preprocess_image(img_path):
 
 # Parcourir toutes les images du dossier
 for img_file in os.listdir(input_dir):
-    img_path = os.path.join(input_dir, img_file)
-    try:
-        processed_img = preprocess_image(img_path)
-        # Sauvegarder l'image pré-traitée en fichier NumPy
-        np.save(os.path.join(output_dir, img_file.split('.')[0] + ".npy"), processed_img)
-        print(f"Image {img_file} prétraitée avec succès.")
-    except Exception as e:
-        print(f"Erreur lors du traitement de {img_file}: {str(e)}")
+    if img_file.lower().endswith(('.png', '.jpg', '.jpeg')):  # Vérifier l'extension du fichier
+        img_path = os.path.join(input_dir, img_file)
+        try:
+            processed_img = preprocess_image(img_path)
+            # Sauvegarder l'image pré-traitée en fichier NumPy
+            np.save(os.path.join(output_dir, img_file.split('.')[0] + ".npy"), processed_img)
+            print(f"Image {img_path} prétraitée avec succès.")
+        except Exception as e:
+            print(f"Erreur lors du traitement de {img_path}: {str(e)}")

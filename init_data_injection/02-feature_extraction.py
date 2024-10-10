@@ -4,9 +4,9 @@ from tensorflow.keras.applications import VGG16
 from tensorflow.keras.models import Model
 
 # Dossier contenant les images pré-traitées
-input_dir = "/home/khalil/image_search_engine/data/preprocessed_images/"
+input_dir = r".\data\preprocessed_images"
 # Dossier pour sauvegarder les vecteurs de features
-output_dir = "/home/khalil/image_search_engine/data/features/"
+output_dir = r".\data\features"
 os.makedirs(output_dir, exist_ok=True)
 
 # Charger le modèle VGG16 pré-entraîné sur ImageNet, sans la dernière couche de classification

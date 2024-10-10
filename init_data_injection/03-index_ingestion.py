@@ -3,7 +3,7 @@ import numpy as np
 from elasticsearch import Elasticsearch
 
 # path to features
-input_dir = "/home/khalil/image_search_enginedata/features/"
+input_dir = r".\data\features"
 
 # elasticsearch client connection 
 esclient = Elasticsearch("http://localhost:9200")
