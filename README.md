@@ -1,6 +1,6 @@
-# Visual Search Engine
+# Image Search Engine
 
-This project is a **Visual Search Engine** designed to find similar images based on either a description or an uploaded image. It utilizes deep learning and powerful search indexing to offer fast and accurate results. The core components include VGG16 for feature extraction, Elasticsearch for efficient indexing and searching, and Flask for the web interface. The project is containerized using Docker for easy deployment and scalability.
+This project is a **Visual Search Engine** designed to find similar images based on an uploaded image. It utilizes deep learning and powerful search indexing to offer fast and accurate results. The core components include VGG16 for feature extraction, Elasticsearch for efficient indexing and searching, and Flask for the web interface. The project is containerized using Docker for easy deployment and scalability.
 
 ---
 
@@ -31,5 +31,28 @@ To run the project locally, follow these steps:
 ```bash
 git clone https://github.com/Drira22/Image_search_engine.git
 cd Image_search_engine
+```
 
-### 1. Clone the repository
+### 2. Install dependencies
+Install the required Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run Elasticsearch and Kibana with Docker
+To run the Elasticsearch and Kibana containers, execute the following command:
+```bash
+docker-compose up --build
+```
+This command will build and start the Docker containers for Elasticsearch and Kibana. Once the containers are up and running, you can access the Kibana interface at http://localhost:5601
+
+### 3. Launch the App
+After Elasticsearch and Kibana are running, you can start the Flask application:
+```bash
+python app.py
+```
+
+## 📄 Usage
+
+To use the Visual Search Engine, click the "Upload Image" button on the web interface to select an image from your local machine. The search engine will then process the uploaded image using VGG16 feature extraction and Elasticsearch indexing to find similar images and display the results.
