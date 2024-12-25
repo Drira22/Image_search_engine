@@ -15,7 +15,7 @@ This project is a **Visual Search Engine** designed to find similar images based
    - Elasticsearch is used to index the extracted features from the images. It enables fast, scalable, and efficient searching by storing and querying the image feature vectors in a manner that allows for quick similarity searches.
 
 3. **Flask Web Interface**
-   - A simple yet effective frontend built using **Flask** that allows users to upload images or provide descriptions for querying similar images. It interacts with the backend to process the queries and display results in a user-friendly manner.
+   - A simple yet effective frontend built using **Flask** that allows users to upload images for querying similar images. It interacts with the backend to process the queries and display results in a user-friendly manner.
 
 4. **Docker**
    - Docker containers are used for packaging and deploying Elasticsearch and Kibana. This allows the application to be easily run and maintained across different environments with minimal setup.
