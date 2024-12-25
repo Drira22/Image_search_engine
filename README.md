@@ -29,6 +29,7 @@ To run the project locally, follow these steps:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/visual-search-engine.git
-cd visual-search-engine
+git clone https://github.com/Drira22/Image_search_engine.git
+cd Image_search_engine
 
+### 1. Clone the repository
