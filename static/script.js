@@ -1,11 +1,33 @@
 const imageUpload = document.getElementById('imageupload');
 const submitButton = document.getElementById('submitButton');
+const previewContainer = document.getElementById('previewContainer');
+const imagePreview = document.createElement('img');
 
-imageUpload.addEventListener('change', function() {
+previewContainer.appendChild(imagePreview);
+
+imageUpload.addEventListener('change', function () {
     submitButton.disabled = imageUpload.files.length === 0;
+
+    if (imageUpload.files.length > 0) {
+        const file = imageUpload.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = 'block';
+        };
+
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.style.display = 'none';
+    }
 });
 
-submitButton.addEventListener('click', function() {
+submitButton.addEventListener('click', function () {
+    const title = document.querySelector('h3');
+    title.style.display = 'block'; // Show the title
+
+
     const formData = new FormData();
     formData.append('file', imageUpload.files[0]);
 

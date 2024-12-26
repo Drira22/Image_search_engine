@@ -1,13 +1,12 @@
 import os
-import cv2
 from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
 # Dossier contenant les images à pré-traiter
-input_dir = r".\data\images"
+input_dir = r"./data/images"
 # Dossier où sauvegarder les images pré-traitées
-output_dir = r".\data\preprocessed_images"
+output_dir = r"./data/preprocessed_images"
 os.makedirs(output_dir, exist_ok=True)
 
 # Fonction pour charger et pré-traiter une image

@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Définir le chemin du dossier principal
-main_dir = 'data/animals'
+main_dir = './data'
 
 # Extensions d'images courantes
 image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff'}
