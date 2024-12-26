@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/99cdd4fc-8aa5-40c9-8e05-4446bdd7cbf4)# Image Search Engine
+# Image Search Engine
 
 This project is a **Visual Search Engine** designed to find similar images based on an uploaded image. It utilizes deep learning and powerful search indexing to offer fast and accurate results. The core components include VGG16 for feature extraction, Elasticsearch for efficient indexing and searching, and Flask for the web interface. The project is containerized using Docker for easy deployment and scalability.
 
