@@ -21,7 +21,7 @@ This project is a **Visual Search Engine** designed to find similar images based
    - Docker containers are used for packaging and deploying Elasticsearch and Kibana. This allows the application to be easily run and maintained across different environments with minimal setup.
 
 ---
-## Screenshot
+## Preview
 
 ![Website Screenshot](website-preview.png)
 
