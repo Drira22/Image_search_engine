@@ -1,4 +1,4 @@
-# Image Search Engine
+![image](https://github.com/user-attachments/assets/99cdd4fc-8aa5-40c9-8e05-4446bdd7cbf4)# Image Search Engine
 
 This project is a **Visual Search Engine** designed to find similar images based on an uploaded image. It utilizes deep learning and powerful search indexing to offer fast and accurate results. The core components include VGG16 for feature extraction, Elasticsearch for efficient indexing and searching, and Flask for the web interface. The project is containerized using Docker for easy deployment and scalability.
 
@@ -19,6 +19,11 @@ This project is a **Visual Search Engine** designed to find similar images based
 
 4. **Docker**
    - Docker containers are used for packaging and deploying Elasticsearch and Kibana. This allows the application to be easily run and maintained across different environments with minimal setup.
+
+---
+## Screenshot
+
+![Website Screenshot](website-preview.png)
 
 ---
 
